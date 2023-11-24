@@ -7,7 +7,7 @@ from scrapy import signals
 
 # useful for handling different item types with a single interface
 from itemadapter import is_item, ItemAdapter
-
+from fake_useragent import UserAgent
 
 class CnkiSpiderMiddleware:
     # Not all methods need to be defined. If a method is not defined,
@@ -78,7 +78,8 @@ class CnkiDownloaderMiddleware:
         # - or return a Request object
         # - or raise IgnoreRequest: process_exception() methods of
         #   installed downloader middleware will be called
-        return None
+        ua = UserAgent()
+        request.headers["User-Agent"] = ua.random
 
     def process_response(self, request, response, spider):
         # Called with the response returned from the downloader.
@@ -101,13 +102,3 @@ class CnkiDownloaderMiddleware:
 
     def spider_opened(self, spider):
         spider.logger.info("Spider opened: %s" % spider.name)
-
-
-from scrapy.downloadermiddlewares.useragent import UserAgentMiddleware
-from fake_useragent import UserAgent
-
-
-class CNKIUserAgentMiddleware(UserAgentMiddleware):
-    def process_request(self, request, spider):
-        ua = UserAgent()
-        request.headers["User-Agent"] = ua.random

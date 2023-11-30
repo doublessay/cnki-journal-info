@@ -1,12 +1,13 @@
 import csv
 import json
+import math
 import scrapy
 
 
 class JournalSpider(scrapy.Spider):
     name = "journal"
 
-    with open("cnki_journal_info.csv", "r") as f:
+    with open("dataset/2023-11-30.csv", "r") as f:
         reader = csv.reader(f)
         journal_codes = {row[-2] for row in reader}
 
@@ -20,6 +21,7 @@ class JournalSpider(scrapy.Spider):
         category_count_list = response.xpath("//li/span/a/i/following-sibling::em/text()").getall()
         assert len(category_count_list) == 10
         category_count_list = [int(i.strip("()")) for i in category_count_list]
+        category_page_count_list = [math.ceil(i / 21) for i in category_count_list]
 
         search_state_json = {
             "StateID": "",
@@ -65,7 +67,7 @@ class JournalSpider(scrapy.Spider):
                 "Additon": "",
             },
         }
-        for category, category_count in zip("ABCDEFGHIJ", category_count_list):
+        for category, category_page_count in zip("ABCDEFGHIJ", category_page_count_list):
             search_state_json["QNode"]["QGroup"][0]["ChildItems"][0]["Items"][0]["Value"] = category + "?"
             data = {
                 "searchStateJson": json.dumps(search_state_json),
@@ -77,7 +79,7 @@ class JournalSpider(scrapy.Spider):
                 "clickName": "",
                 "switchdata": "",
             }
-            for i in range(1, category_count + 1):
+            for i in range(1, category_page_count + 1):
                 data["pageindex"] = str(i)
                 yield scrapy.FormRequest(
                     url="https://navi.cnki.net/knavi/journals/searchbaseinfo", formdata=data, callback=self.parse_page
@@ -97,7 +99,10 @@ class JournalSpider(scrapy.Spider):
         if not response.text.startswith("<script>"):
             yield {
                 "期刊名称": response.xpath("//h3[@class='titbox titbox1']/text()").get(),
-                "收录数据库": response.xpath("//p[@class='journalType journalType2']/span//text()").getall(),
+                "出版类型": response.xpath("//p[@class='journalType journalType1']/span/text()").getall(),
+                "收录信息": response.xpath("//p[@class='journalType journalType2']/span//text()").getall(),
+                "收录信息详细": response.xpath("//h4/following-sibling::p//text()").getall(),
+                "目前状态": response.xpath("//label[text()='目前状态']/following-sibling::span/text()").get(),
                 "曾用刊名": response.xpath("//label[text()='曾用刊名']/following-sibling::span/text()").get(),
                 "主办单位": response.xpath("//label[text()='主办单位']/following-sibling::span/text()").get(),
                 "出版周期": response.xpath("//label[text()='出版周期']/following-sibling::span/text()").get(),

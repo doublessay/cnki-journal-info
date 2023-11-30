@@ -3,7 +3,7 @@
 - 爬取的期刊信息涵盖期刊名称、主办单位、出版周期、ISSN号、CN号、所属学科、影响因子、字母标识、收录数据库等字段；
 
 ## 运行爬虫
-本仓库提供 [爬取的数据集](https://github.com/doublessay/cnki-journal-info/blob/main/cnki_journal_info.csv)，可直接下载使用。如果想要自行爬取，请参考如下步骤：
+本仓库提供 [爬取的数据集](https://github.com/doublessay/cnki-journal-info/blob/main/dataset)，可直接下载使用。如果想要自行爬取，请参考如下步骤：
 ```bash
 git clone https://github.com/doublessay/cnki-journal-info.git
 cd cnki-journal-info
@@ -19,7 +19,7 @@ venv\Scripts\activate.bat # Windows
 pip install -r requirements.txt
 
 # 运行爬虫
-scrapy crawl journal -o cnki_journal_info.csv
+scrapy crawl journal -o dataset/2023-11-30.csv
 ```
 
 ## 爬取策略
@@ -37,7 +37,7 @@ scrapy crawl journal -o cnki_journal_info.csv
 |西北大学学报(哲学社会科学版)| |西北大学|1913|https://navi.cnki.net/knavi/journals/XBDS/detail|
 |科学| |上海科学技术出版社有限公司|1915|https://navi.cnki.net/knavi/journals/KXZZ/detail|
 
-2. 综合影响因子最高的5种期刊[^1]
+2. 综合影响因子[^1]最高的5种期刊
 
 |期刊名称|主办单位|专题名称|综合影响因子|url|
 |----|----|----|----|----|

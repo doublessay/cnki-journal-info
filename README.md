@@ -57,4 +57,38 @@ scrapy crawl journal -o dataset/2023-11-30.csv
 |管理世界|国务院发展研究中心|管理学|2835.96|https://navi.cnki.net/knavi/journals/GLSJ/detail|
 |中国社会科学|中国社会科学院|教育综合|2743.52|https://navi.cnki.net/knavi/journals/ZSHK/detail|
 
+4. CNKI收录的CSCD(2023-2024)期刊(1238种)
+
+|期刊名称|主办单位|专题名称|url|
+|:----|:----|:----|:----|
+|Asian Herpetological Research|中国科学院成都生物研究所;中国科技出版传媒股份有限公司|生物学|https://navi.cnki.net/knavi/journals/YZLQ/detail|
+|Research in Astronomy and Astrophysics|中国科学院国家天文台;中国天文学会|天文学|https://navi.cnki.net/knavi/journals/TTWL/detail|
+|Journal of Oceanology and Limnology|中国海洋湖沼学会|海洋学|https://navi.cnki.net/knavi/journals/HYFW/detail|
+|Theoretical and Applied Mechanics Letters|中国科学院力学研究所;中国力学学会|力学|https://navi.cnki.net/knavi/journals/LXKB/detail|
+|Journal of Systems Science and Information|中国系统工程学会;中国科技出版传媒股份有限公司|非线性科学与系统科学;计算机软件及计算机应用|https://navi.cnki.net/knavi/journals/JSSI/detail|
+|...| | | |
+
+5. CNKI收录的CSSCI(2021-2022)期刊(813种)
+
+|期刊名称|主办单位|专题名称|url|
+|:----|:----|:----|:----|
+|中国社会经济史研究|厦门大学历史研究所|中国通史;经济体制改革|https://navi.cnki.net/knavi/journals/ZSJY/detail|
+|新疆社会科学|新疆社会科学院|经济与管理综合|https://navi.cnki.net/knavi/journals/XJSH/detail|
+|印度洋经济体研究|云南财经大学|经济体制改革|https://navi.cnki.net/knavi/journals/YDYY/detail|
+|地方财政研究|东北财经大学;辽宁省财政科学研究所|财政与税收|https://navi.cnki.net/knavi/journals/DFCZ/detail|
+|财务研究|中国财政杂志社|会计|https://navi.cnki.net/knavi/journals/CWYJ/detail|
+|...| | | |
+
+6. CNKI收录的SCI(2023)期刊(178种)
+
+|期刊名称|主办单位|专题名称|url|
+|:----|:----|:----|:----|
+|Asian Herpetological Research|中国科学院成都生物研究所;中国科技出版传媒股份有限公司|生物学|https://navi.cnki.net/knavi/journals/YZLQ/detail|
+|Research in Astronomy and Astrophysics|中国科学院国家天文台;中国天文学会|天文学|https://navi.cnki.net/knavi/journals/TTWL/detail|
+|Journal of Oceanology and Limnology|中国海洋湖沼学会|海洋学|https://navi.cnki.net/knavi/journals/HYFW/detail|
+|China Communications|中国通信学会|电信技术;信息经济与邮政经济|https://navi.cnki.net/knavi/journals/ZGTO/detail|
+|Journal of Computer Science & Technology|中国计算机学会;中国科学院计算技术研究所|电子信息科学综合|https://navi.cnki.net/knavi/journals/JSKB/detail|
+|...| | | |
+
+
 [^1]: 综合影响因子是指被评价期刊前两年发表的可被引文献在统计年的被引用总次数与该期刊在前两年内发表的可被引文献总量之比。复合影响因子的统计范围不仅包含期刊，还包含硕博士论文和会议论文。

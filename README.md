@@ -1,5 +1,5 @@
 # 使用Scrapy爬取CNKI期刊信息
-- 截止到2023年11月，[CNKI 共收录11615种期刊](https://navi.cnki.net/knavi/journals/search)，由于存在跨学科期刊，最终爬取的数据量低于该值；
+- 截止到2023年11月，按照学科分类CNKI共收录[11615种期刊](https://navi.cnki.net/knavi/journals/search)。由于存在跨学科期刊，最终爬取的数据量要低于该数值；
 - 爬取的期刊信息涵盖期刊名称、主办单位、出版周期、ISSN号、CN号、所属学科、影响因子、字母标识、收录数据库等字段；
 
 ## 运行爬虫
@@ -23,7 +23,7 @@ scrapy crawl journal -o dataset/2023-11-30.csv
 ```
 
 ## 爬取策略
-1. 使用随机 User-Agent，借助 [fake-useragent](https://pypi.org/project/fake-useragent/) 库构造一个 Middleware；
+1. 使用随机User-Agent，借助 [fake-useragent](https://pypi.org/project/fake-useragent/) 库构造一个Middleware；
 2. 并发请求设置为3，下载延迟设置为1秒，禁用cookie；
 
 ## 统计分析
@@ -57,7 +57,7 @@ scrapy crawl journal -o dataset/2023-11-30.csv
 |管理世界|国务院发展研究中心|管理学|2835.96|https://navi.cnki.net/knavi/journals/GLSJ/detail|
 |中国社会科学|中国社会科学院|教育综合|2743.52|https://navi.cnki.net/knavi/journals/ZSHK/detail|
 
-4. CNKI收录的CSCD(2023-2024)期刊(1238种)
+4. CNKI收录的[CSCD(2023-2024)](http://sciencechina.cn/cscd_source.jsp)期刊(1238种)
 
 |期刊名称|主办单位|专题名称|url|
 |:----|:----|:----|:----|
@@ -68,7 +68,7 @@ scrapy crawl journal -o dataset/2023-11-30.csv
 |Journal of Systems Science and Information|中国系统工程学会;中国科技出版传媒股份有限公司|非线性科学与系统科学;计算机软件及计算机应用|https://navi.cnki.net/knavi/journals/JSSI/detail|
 |...| | | |
 
-5. CNKI收录的CSSCI(2021-2022)期刊(813种)
+5. CNKI收录的[CSSCI(2021-2022)](https://cssrac.nju.edu.cn/cpzx/zwshkxywsy/index.html)期刊(813种)
 
 |期刊名称|主办单位|专题名称|url|
 |:----|:----|:----|:----|

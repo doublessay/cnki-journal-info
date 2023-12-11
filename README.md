@@ -38,7 +38,7 @@ scrapy crawl journal -o dataset/2023-11-30.csv
 |科学| |上海科学技术出版社有限公司|1915|https://navi.cnki.net/knavi/journals/KXZZ/detail|
 
 2. 创刊时间分布折线图
-![](https://raw.githubusercontent.com/doublessay/cnki-journal-info/main/image/line.png)
+![](https://raw.githubusercontent.com/doublessay/cnki-journal-info/main/image/Line.png)
 
 3. 综合影响因子[^1]最高的5种期刊
 

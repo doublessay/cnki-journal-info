@@ -37,7 +37,10 @@ scrapy crawl journal -o dataset/2023-11-30.csv
 |西北大学学报(哲学社会科学版)| |西北大学|1913|https://navi.cnki.net/knavi/journals/XBDS/detail|
 |科学| |上海科学技术出版社有限公司|1915|https://navi.cnki.net/knavi/journals/KXZZ/detail|
 
-2. 综合影响因子[^1]最高的5种期刊
+2. 创刊时间分布折线图
+![](https://raw.githubusercontent.com/doublessay/cnki-journal-info/main/image/line.png)
+
+3. 综合影响因子[^1]最高的5种期刊
 
 |期刊名称|主办单位|专题名称|综合影响因子|url|
 |----|----|----|----|----|
@@ -47,7 +50,7 @@ scrapy crawl journal -o dataset/2023-11-30.csv
 |经济研究|中国社会科学院经济研究所|经济与管理综合|15.382|https://navi.cnki.net/knavi/journals/JJYJ/detail|
 |中国社会科学|中国社会科学院|教育综合|11.783|https://navi.cnki.net/knavi/journals/ZSHK/detail|
 
-3. 平均下载次数最高的5种期刊
+4. 平均下载次数最高的5种期刊
 
 |期刊名称|主办单位|专题名称|平均下载次数|url|
 |----|----|----|----|----|
@@ -57,7 +60,7 @@ scrapy crawl journal -o dataset/2023-11-30.csv
 |管理世界|国务院发展研究中心|管理学|2835.96|https://navi.cnki.net/knavi/journals/GLSJ/detail|
 |中国社会科学|中国社会科学院|教育综合|2743.52|https://navi.cnki.net/knavi/journals/ZSHK/detail|
 
-4. CNKI收录的[CSCD(2023-2024)](http://sciencechina.cn/cscd_source.jsp)期刊(1238种)
+5. CNKI收录的[CSCD(2023-2024)](http://sciencechina.cn/cscd_source.jsp)期刊(1238种)
 
 |期刊名称|主办单位|专题名称|url|
 |:----|:----|:----|:----|
@@ -68,7 +71,7 @@ scrapy crawl journal -o dataset/2023-11-30.csv
 |Journal of Systems Science and Information|中国系统工程学会;中国科技出版传媒股份有限公司|非线性科学与系统科学;计算机软件及计算机应用|https://navi.cnki.net/knavi/journals/JSSI/detail|
 |...| | | |
 
-5. CNKI收录的[CSSCI(2021-2022)](https://cssrac.nju.edu.cn/cpzx/zwshkxywsy/index.html)期刊(813种)
+6. CNKI收录的[CSSCI(2021-2022)](https://cssrac.nju.edu.cn/cpzx/zwshkxywsy/index.html)期刊(813种)
 
 |期刊名称|主办单位|专题名称|url|
 |:----|:----|:----|:----|
@@ -79,7 +82,7 @@ scrapy crawl journal -o dataset/2023-11-30.csv
 |财务研究|中国财政杂志社|会计|https://navi.cnki.net/knavi/journals/CWYJ/detail|
 |...| | | |
 
-6. CNKI收录的SCI(2023)期刊(178种)
+7. CNKI收录的SCI(2023)期刊(178种)
 
 |期刊名称|主办单位|专题名称|url|
 |:----|:----|:----|:----|

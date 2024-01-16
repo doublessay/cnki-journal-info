@@ -1,5 +1,5 @@
 # 使用Scrapy爬取CNKI期刊信息
-- 截止到2023年11月，按照学科分类CNKI共收录[11615种期刊](https://navi.cnki.net/knavi/journals/search)。由于存在跨学科期刊，最终爬取的数据量要低于该数值；
+- 截止到2023年11月，按照学科分类CNKI共收录 [11615种期刊](https://navi.cnki.net/knavi/journals/search)。由于存在跨学科期刊，最终爬取的数据量要低于该数值；
 - 爬取的期刊信息涵盖期刊名称、主办单位、出版周期、ISSN号、CN号、所属学科、影响因子、字母标识、收录数据库等字段；
 
 ## 运行爬虫
@@ -38,6 +38,7 @@ scrapy crawl journal -o dataset/2023-11-30.csv
 |科学| |上海科学技术出版社有限公司|1915|https://navi.cnki.net/knavi/journals/KXZZ/detail|
 
 2. 创刊时间分布折线图
+
 ![](https://raw.githubusercontent.com/doublessay/cnki-journal-info/main/image/Line.png)
 
 3. 综合影响因子[^1]最高的5种期刊
@@ -63,7 +64,7 @@ scrapy crawl journal -o dataset/2023-11-30.csv
 5. CNKI收录的[CSCD(2023-2024)](http://sciencechina.cn/cscd_source.jsp)期刊(1238种)
 
 |期刊名称|主办单位|专题名称|url|
-|:----|:----|:----|:----|
+|----|----|----|----|
 |Asian Herpetological Research|中国科学院成都生物研究所;中国科技出版传媒股份有限公司|生物学|https://navi.cnki.net/knavi/journals/YZLQ/detail|
 |Research in Astronomy and Astrophysics|中国科学院国家天文台;中国天文学会|天文学|https://navi.cnki.net/knavi/journals/TTWL/detail|
 |Journal of Oceanology and Limnology|中国海洋湖沼学会|海洋学|https://navi.cnki.net/knavi/journals/HYFW/detail|
@@ -74,7 +75,7 @@ scrapy crawl journal -o dataset/2023-11-30.csv
 6. CNKI收录的[CSSCI(2021-2022)](https://cssrac.nju.edu.cn/cpzx/zwshkxywsy/index.html)期刊(813种)
 
 |期刊名称|主办单位|专题名称|url|
-|:----|:----|:----|:----|
+|----|----|----|----|
 |中国社会经济史研究|厦门大学历史研究所|中国通史;经济体制改革|https://navi.cnki.net/knavi/journals/ZSJY/detail|
 |新疆社会科学|新疆社会科学院|经济与管理综合|https://navi.cnki.net/knavi/journals/XJSH/detail|
 |印度洋经济体研究|云南财经大学|经济体制改革|https://navi.cnki.net/knavi/journals/YDYY/detail|
@@ -85,7 +86,7 @@ scrapy crawl journal -o dataset/2023-11-30.csv
 7. CNKI收录的SCI(2023)期刊(178种)
 
 |期刊名称|主办单位|专题名称|url|
-|:----|:----|:----|:----|
+|----|----|----|----|
 |Asian Herpetological Research|中国科学院成都生物研究所;中国科技出版传媒股份有限公司|生物学|https://navi.cnki.net/knavi/journals/YZLQ/detail|
 |Research in Astronomy and Astrophysics|中国科学院国家天文台;中国天文学会|天文学|https://navi.cnki.net/knavi/journals/TTWL/detail|
 |Journal of Oceanology and Limnology|中国海洋湖沼学会|海洋学|https://navi.cnki.net/knavi/journals/HYFW/detail|

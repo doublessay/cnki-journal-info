@@ -13,7 +13,7 @@ python -m venv venv
 
 # 激活虚拟环境
 source venv/bin/activate # Mac/Linux
-venv\Scripts\activate.bat # Windows
+.\venv\Scripts\activate # Windows
 
 # 安装依赖
 pip install -r requirements.txt

@@ -7,7 +7,7 @@ import scrapy
 class JournalSpider(scrapy.Spider):
     name = "journal"
 
-    with open("dataset/2023-11-30.csv", "r") as f:
+    with open("dataset/2023-11-30.csv", "r", encoding='utf-8') as f:
         reader = csv.reader(f)
         journal_codes = {row[-2] for row in reader}
 
